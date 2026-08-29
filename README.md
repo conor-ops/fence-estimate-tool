@@ -6,6 +6,10 @@ Built for **208 Fence and Gate**.
 
 ## API
 
+### `GET /`
+
+Interactive landing page for the estimate service with a live, client-side fence preview and links to the API docs and health check.
+
 ### `POST /estimate`
 
 **Request body:**
