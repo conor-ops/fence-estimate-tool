@@ -328,10 +328,10 @@ LANDING_PAGE_HTML = """<!DOCTYPE html>
       quip.textContent = quips[terrain.value];
     }
 
-    [length, height, gates, terrain].forEach((element) => {
+    [length, height, gates].forEach((element) => {
       element.addEventListener("input", update);
-      element.addEventListener("change", update);
     });
+    terrain.addEventListener("change", update);
 
     update();
   </script>
