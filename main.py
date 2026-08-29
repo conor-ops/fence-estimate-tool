@@ -384,7 +384,7 @@ def extract_json(text: str) -> Dict[str, Any]:
 @app.get("/", response_class=HTMLResponse)
 async def root():
     """Serve the interactive landing page."""
-    return HTMLResponse(content=LANDING_PAGE_HTML)
+    return LANDING_PAGE_HTML
 
 
 @app.get("/health")
