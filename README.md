@@ -41,6 +41,9 @@ Interactive landing page for the estimate service with a live, client-side fence
 }
 ```
 
+### `GET /info`
+Info endpoint to preserve machine-readable status. Returns basic service info and available endpoints.
+
 ### `GET /health`
 Health check endpoint for Cloud Run.
 
