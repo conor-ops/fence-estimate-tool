@@ -101,7 +101,7 @@ async def root(request: Request):
 @app.get("/info")
 async def info():
     """JSON info endpoint to preserve machine-readable status."""
-    return {"service": "Fence Estimate Tool", "status": "ok", "endpoints": ["/estimate", "/health"]}
+    return {"service": "Fence Estimate Tool", "status": "ok", "endpoints": ["/estimate", "/info", "/health"]}
 
 @app.get("/health")
 async def health():
