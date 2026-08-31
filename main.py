@@ -98,6 +98,13 @@ async def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
+@app.get("/info")
+async def info():
+    """JSON info endpoint preserving machine-readable service status."""
+    endpoints = sorted({r.path for r in app.routes if hasattr(r, "path")})
+    return {"service": "Fence Estimate Tool", "status": "ok", "endpoints": endpoints}
+
+
 @app.get("/health")
 async def health():
     """Health check for Cloud Run."""
