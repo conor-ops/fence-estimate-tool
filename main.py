@@ -98,6 +98,11 @@ async def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
 
 
+@app.get("/info")
+async def info():
+    """JSON info endpoint to preserve machine-readable status."""
+    return {"service": "Fence Estimate Tool", "status": "ok", "endpoints": ["/estimate", "/health"]}
+
 @app.get("/health")
 async def health():
     """Health check for Cloud Run."""
